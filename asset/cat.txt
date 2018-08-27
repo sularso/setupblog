@@ -1,0 +1,7 @@
+bathroom
+car
+kitchen
+exterior
+interior
+garden
+furniture

@@ -24,3 +24,4 @@ Edit Script:
 3. buka file index.php ganti namadomainanda.com dengan domain anda
 4. folder sitemap isi masing2 file txt dengan keyword dengan format tanpa tanda kutip "home-decor-idea" maksimal 1000 keyword per file. 
 5. Buka folder asset cat.txt isi sesuaikan tema blog dan home.txt tampil dihalaman utama jangan terlalu banyak 50 keyword cukup
+6. upload script ke directory /var/www/gantidengandomainanda.com/public_html/

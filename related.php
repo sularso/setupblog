@@ -24,7 +24,7 @@ if ($kw) {
         $take = str_replace(' ', '-', $tagName);
         $tagsLinksArray[] = '<a href='.$take.'>'.$tagName.'</a>';}
     $tagsLinks = implode(', ', $tagsLinksArray);		
-echo '<div class=take><b>Tags =</b> '.$tagsLinks.'</div>';?>
+echo '<div class=take><b></b></div>';?>
 <div class="other">
     <h2>Other Post to <?php echo $t.$toti; ?></h2>
     <ul><?php

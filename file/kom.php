@@ -1,6 +1,5 @@
 <?php
 include "simple_html_dom.php";
-// Create DOM from URL or file
 $q = @$_GET['qw'];
 $url = "http://www.google.com/search?tbm=isch&safe=active&q=".str_replace(' ', '+', $q);
 $opts = array(
@@ -12,14 +11,6 @@ $opts = array(
 $context = stream_context_create($opts);
 $html = file_get_html($url, false, $context);
 
-// Find all images 
 foreach($html->find('div[@class="rg_meta notranslate"]') as $element) 
        echo $element;
-
-// Find all links 
-     /*
-foreach($html->find('img') as $element) 
-       echo $element->src . '<br>';
-foreach($html->find('a') as $element) 
-       echo $element->href . '<br>';
-*/?>
+?>

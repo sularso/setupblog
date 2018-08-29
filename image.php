@@ -65,7 +65,6 @@ if (empty($pt[$i])) {
 }?>
       </div>
     </div><?php } ?>
-    <?php include('related.php');?>
-
+  <?php include('related.php');?>
   <?php include('sidebar.php');?>
   <?php include('footer.php');?>

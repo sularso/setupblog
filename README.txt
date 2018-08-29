@@ -1,16 +1,26 @@
-1. sebelum bertanya "kok domain.com/sitemap-0.xml & domain.com/sitemap-image.xml error"
-	iya karena gak ada file (1.txt, 2.txt, 3.txt dan seterusnya) dalam folder sitemap.
+Konfigurasi VPS:
+1. Spek VPS Ubuntu 16.04 32 byte ram 512 storage 25Gb
+2. Ikuti tutorial di https://albennet.com/vpsapachewebserver.php (sampai step 3. Create VHOST BEGIN)
+3. nano /etc/httpd/conf/httpd.conf
+ tambahkan script dibawah ini
 
-2. dalam folder asset/tool.php harus sesuai dengan jumlah file yang ada pada folder sitemap untuk memanggil 		
-keyword, disini saya kasih 127.txt biar agan gan ribet.
+ #############
+<Directory /var/www/gantidengandomainanda.com/public_html>
+ AllowOverride All
+</Directory>
+ #############
 
-3. dalam folder sitemap/1.txt, 2.txt, 3.txt dan seterusnya maksimal 5000 keyword dalam satu file txt agar tidak 	lambat.
-4. setiap keyword dalam setiap file txt harus dikasih (-) pada spasinya ex: "beautiful-bedrooms-design"
+4. service httpd restart
 
-5. untuk tampilan yang tidak sesuai dengan niche agan harap di ganti sendiri pada kodingnya.
 
-6. ini saya membuatnya dengan niche home jadi maaf kalo themenya tentang "home design"
 
-7. jika dirasa agan mau upload theme ini di hosting jangan lupa untuk mengganti (<base href="/gambar/" />) 			menjadi (<base href="/" />)
+Edit Script:
+1. Buka file
+	-header.php
+	-meta.php
+  Search and replace kata "Decoratingfree" dengan nama domain anda.
 
-8. terima kasih (0_0)
+2. Buka file meta.php isi deskripsi meta
+3. buka file index.php ganti namadomainanda.com dengan domain anda
+4. folder sitemap isi masing2 file txt dengan keyword dengan format tanpa tanda kutip "home-decor-idea" maksimal 1000 keyword per file. 
+5. Buka folder asset cat.txt isi sesuaikan tema blog dan home.txt tampil dihalaman utama jangan terlalu banyak 50 keyword cukup

@@ -1,8 +1,8 @@
 <?php
 $server = $_SERVER['SERVER_NAME'];
 switch ($server) {
-	case 'http://decoratingfree.com/':
-	case 'http://www.decoratingfree.com/':
+	case 'http://namadomainanda.com/':
+	case 'http://www.namadomainanda.com/':
 		include 'home.php';
 		break;
 	default:

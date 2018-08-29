@@ -2,19 +2,14 @@
 $q1 = @$_GET['images'];
 $q2 = @$_GET['key'];
 $q3 = @$_GET['s'];
-//langsung ubah juga url di sitemap-image biar gak ketinggalan........
 if ($q1) {
 	$url = "$_SERVER[SERVER_NAME]"."/file/?submit=submit&qw=".str_replace('-', '+', $q1);
-	//$url = "www.nofollow.ga/file/?submit=submit&qw=".str_replace('-', '+', $q1);
 } elseif ($q2) {
 	$url = "$_SERVER[SERVER_NAME]"."/file/?submit=submit&qw=".str_replace('-', '+', $q2);
-	//$url = "www.nofollow.ga/file/?submit=submit&qw=".str_replace('-', '+', $q2);
 } elseif ($q3) {
 	$url = "$_SERVER[SERVER_NAME]"."/file/?submit=submit&qw=".str_replace('-', '+', $q3);
-	//$url = "www.nofollow.ga/file/?submit=submit&qw=".str_replace('-', '+', $q3);
 } else {
 	$url = "$_SERVER[SERVER_NAME]"."/file/?submit=submit&qw=".str_replace('-', '+', $q1);
-	//$url = "www.nofollow.ga/file/?submit=submit&qw=".str_replace('-', '+', $q1);
 }
 function get ( $url ){
 	$curl = curl_init($url);
@@ -25,7 +20,6 @@ function get ( $url ){
 	return $output;
 }
 $output = get($url);
-//echo $output;
 preg_match_all('!"ou":"(.*?)"!',$output, $ous);
 preg_match_all('!"tu":"(.*?)"!',$output, $title);
 preg_match_all('!"s":"(.*?)"!',$output, $se);
@@ -50,6 +44,10 @@ $pt=str_replace($d, '', $p0t);
 	"sitemap/3.txt",
 	"sitemap/4.txt",
 	"sitemap/5.txt",
-	"sitemap/6.txt"
+	"sitemap/6.txt",
+	"sitemap/7.txt",
+	"sitemap/8.txt",
+	"sitemap/9.txt",
+	"sitemap/10.txt",
 );
 ?>

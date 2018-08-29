@@ -13,7 +13,6 @@ $kiwode = $lines[array_rand($lines)];
 $kiwody = str_replace(array("\n", "-","\r"), '+', $kiwode);
 $kiwod = str_replace("++", "",$kiwody);
 $url2 = "$_SERVER[SERVER_NAME]"."/file/?submit=submit&qw=".$kiwod;
-//$url2 = "www.nofollow.ga/file/?submit=submit&qw=".$kiwod;
 $output = get($url2);
 
 preg_match_all('!"ou":"(.*?)"!',$output, $url_matches);
@@ -86,7 +85,7 @@ if (empty($title)) {
 if (empty($title)) {
     echo $link[$x];
 }?></image:title>
-    <image:geo_location>United States</image:geo_location>
+    <image:geo_location>German</image:geo_location>
     <image:license>http://<?php echo $_SERVER['SERVER_NAME'];?>/<?php echo convert($link[$x]);?></image:license>
   </image:image>
 

@@ -11,10 +11,12 @@ $txtcat = file("asset/cat.txt");
 for ($i = 0; $i< count($txtcat); $i++){
 $li = str_replace(array("-","\n","\r"), " ", $txtcat);
 $ul = str_replace("  ", "", $li);
-$ol = str_replace(array("\n","\r"), "", $txtcat);?>
+$ol = str_replace(array("\n","\r"), "", $txtcat);
+$con = convert($ol[$i]);
+$url_cat = str_replace(' ', '-', $con);?>
 
 		<div class="pop">
-			<a href=<?php echo '"category/'.$ol[$i].'/"';?>><p></p><?php echo $ul[$i];?></a>
+			<a href=<?php echo '"category/'.strtolower($url_cat).'/"';?>><p></p><?php echo $ul[$i];?></a>
 		</div>
 <?php } ?>
 	</div>
@@ -29,9 +31,6 @@ $url = str_replace(array("\n","\r"), "", $txt);
 $url_fix = convert($url[$i]);
 
 ?>
-
-<!-- mb_convert_encoding($text, 'UTF-8', $chr)
- -->
 		<div class="pop">
 			<a href=<?php echo '"'.str_replace(' ', '-', $url_fix).'"';?>><p></p><?php echo $link[$i];?></a>
 		</div>

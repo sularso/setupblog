@@ -9,6 +9,10 @@ RewriteRule ^([a-zA-Z0-9_-]+)$ image.php?images=$1
 RewriteRule ^category/([a-zA-Z0-9_-]+)\/$ category.php?cat=$1
 RewriteRule ^image/(.*)/([0-9]+)/?$ atta.php?key=$1&idd=$2
 
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^example.com [NC]
+RewriteRule ^(.*)$ http://www.example.com/$1 [L,R=301,NC]
+
 RewriteRule ^sitemap\.xml$ sitemap.php [L]
 RewriteRule ^sitemap-image\.xml$ sitemap-image.php [L]
 RewriteRule ^sitemap-([0-9]+)\.xml$ sitemap-0.php [L]
